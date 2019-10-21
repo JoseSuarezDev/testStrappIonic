@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons slot="end">
+            <ion-button href="/login">
+                <ion-icon name="log-out" size="large"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-title>
+            Categorias
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let category of categories$ | async" (click)="details(category.id)">
+        <img height="250" [src]="category.url" />
+        <ion-card-header>
+            <ion-card-subtitle>Categorias: {{ category.name }}</ion-card-subtitle>
+            <ion-card-title>{{ category.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus possimus perferendis unde veniam praesentium quas officia repellat obcaecati. Dignissimos facilis ex eum! Totam aperiam, nesciunt consequuntur expedita obcaecati illum enim.
+        </ion-card-content>
+    </ion-card>
+ 
+</ion-content>
